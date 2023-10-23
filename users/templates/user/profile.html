@@ -1,0 +1,37 @@
+
+
+
+
+
+{% extends 'food/base.html' %}
+
+
+{% block body %}
+    <div class="container " style="height: 88vh; width: 100%;">
+        <div class="row "style="height: 88vh; width: 100%; 
+        display: flex;
+        justify-content: center;
+        ">
+            <div class="" >
+                <div class="card">
+                    <div class="card-header bg-dark ">
+                      <div class="card-title text-white">Profile</div>
+                    </div>
+                    <div class="card-body "  style="width:300px;">
+                        <h1 style="text-align: center;">{{ user.username }}</h1>
+                       <div class="card-item" style="
+                       display: flex;
+                       justify-content: center;">
+
+                        <img src="{{ user.profile.image.url }}" width="100px" height="100px" style="border-radius: 50%;">
+
+                       </div>
+                        <h5 style="text-align: center;">{{ user.profile.location }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

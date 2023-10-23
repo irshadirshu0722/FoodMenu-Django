@@ -1,0 +1,43 @@
+{% extends 'food/base.html' %}
+ {% block body %}
+
+
+
+       <div class="container">
+        <div class="row d-block">
+
+          {% for item in item_list%}
+          <div class=" pt-4 d-flex gap-3 justify-content-between">
+            
+              <div class="col-md-4 flex-item d-flex  justify-content-end">
+                  <img src={{item.item_image}} alt="" class="card" height="150px" width="150px">
+               </div>
+             <div class="col-md-4 flex-item">
+               <h3>{{item.item_name}}</h3>
+               <h5>{{item.item_desp}}</h5>
+               <h6>${{item.item_price}}</h6>
+               <h6>{{item.user_name}}</h6>
+
+
+               
+              </div>
+                <div class="col-md-4 d-flex  align-items-center">
+                   <a href="{%  url 'food:detail' item.id %}" class="btn btn-info p-4">View Details</a>
+                </div>
+              </div>
+
+          
+          {% endfor %}
+
+       </div>
+       
+         
+      
+
+    
+  
+
+
+
+{% endblock %}
+ 

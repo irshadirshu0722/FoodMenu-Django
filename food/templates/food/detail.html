@@ -1,0 +1,32 @@
+
+{% extends 'food/base.html' %}
+
+{% block body %}
+
+{% if object %}
+
+<div class="container">
+    <div class="row justify-content-center align-items-center min-vh-100">
+        <div class=" d-flex">
+        <img class="col-md-8" src={{object.item_image}} alt="" height="400px" width="500px">
+          <div class=" col-md-4 " style="display: flex; flex-direction: column; justify-content: center;">
+           <h1>{{object.item_name}}</h1>
+          <h2> ${{object.item_price}}</h2>
+          <h3> {{object.item_desp}}</h3>
+          <h6> {{is_author}}</h6>
+          
+        {% if user == author %}
+          <a href="{% url 'food:edit-item' object.id %}" class="btn btn-dark">Edit Item</a>
+          <a href="{% url 'food:delete-item' object.id %}" class="btn btn-danger">Delete Item</a>
+        {% endif %}
+       </div>
+       </div>
+    </div>
+
+</div>
+        
+   {% else %}
+        <h1>404</h1>
+    {% endif %}
+
+{% endblock %}
