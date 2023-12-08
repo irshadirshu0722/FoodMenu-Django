@@ -1,5 +1,12 @@
 # FoodMenu-Django
 
+
+
+
+
+https://github.com/irshadirshu0722/FoodMenu-Django/assets/141476447/a79c6565-1484-401c-9f96-6322fb05334d
+
+
 Presenting the Django Food Menu App:
 
 Our Django Food Menu App is a straightforward and secure platform designed for easy menu management. It comes with the following features:
